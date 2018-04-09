@@ -3,3 +3,35 @@ html, body {
   margin:0;
   padding:0;
 }
+
+#container {
+  height: 100%;
+  position: relative;
+  display: flex;
+  .hoopRow {
+    background-image: url('../../images/rainbow.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+  } 
+}
+
+#container2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  #centerCircle {
+    font-family: 'Faster One';
+    font-size: 5em;
+    // border-radius: 100%;
+    // background-color: rgba(255,255,255,.3);
+    text-shadow: 10px 3px #9afbf5;
+  }
+}
+
