@@ -52,6 +52,12 @@ gulp.task('compressCSS', function(cb) {
 		cssnano()
 	];
 	return gulp.src('app/css/*.css')
-		.pipe(postcss(plugins))
+		.pipe(postcss(cssPlugins))
 		.pipe(gulp.dest('build/css'));
+});
+
+gulp.task('build', function() {
+	runSequence('scss',
+		['compressCSS', 'compressJS', 'compressHTML']
+	);
 });
