@@ -39,7 +39,7 @@ gulp.task('compressJS', function(cb) {
 });
 
 gulp.task('compressHTML', function() {
-	return gulp.src('*.html')
+	return gulp.src('app/*.html')
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('build'));
 });
@@ -55,13 +55,13 @@ gulp.task('compressCSS', function(cb) {
 });
 
 gulp.task('compressIMG', function() {
-	return gulp.src('images/*')
+	return gulp.src('app/images/*.jpg')
 	.pipe(imagemin())
 	.pipe(gulp.dest('build/images'));
 });
 
 gulp.task('build', function() {
 	runSequence('scss',
-		['compressCSS', 'compressJS', 'compressHTML']
+		['compressCSS', 'compressJS', 'compressHTML', 'compressIMG']
 	);
 });

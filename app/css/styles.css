@@ -8,7 +8,7 @@ html, body {
   position: relative;
   display: flex; }
   #container .hoopRow {
-    background-image: url("../../images/rainbow.jpg");
+    background-image: url("../images/rainbow.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
